@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;700&display=swap");
+
+:root {
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+header {
+  background: #000;
+  text-decoration: none;
+}
+
+header h1 {
+  color: #fff;
+  margin: 20px;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+}
+
+ul button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+nav a {
+  padding: 5px;
+}*/
+
+.container button {
+  background-color: #333;
+  color: #4caf50;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/******************Mobile Menu********************************/
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  z-index: 1;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: calc(100% - 20px);
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.search-form {
+  display: inline;
+}
+.search-box {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #333;
+  color: #4caf50;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 100px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.pastedetails {
+  background: #1f1b1b;
+  border-radius: 4px;
+  padding: 4px;
+}
+.pastedetails h2 {
+  padding-left: 20px;
+}
+
+.create {
+  font-size: 18px;
+  font-weight: 200;
+  max-width: 100%;
+  padding: 20px;
+  padding-top: 0px;
+  border-radius: 4px;
+  background: #201d1d;
+  height: fit-content;
+}
+
+form .title {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+}
+form .radio {
+  padding: 10px 0;
+}
+form textarea,
+.paste textarea {
+  width: 100%;
+  margin-top: 10px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  background-color: transparent;
+  resize: none;
+  color: #fff;
+  outline: none;
+  overflow: hidden;
+}
+
+.paste textarea {
+  margin-top: 0;
+  height: 398px;
+}
+
+form button {
+  background-color: #4caf50;
+  border: none;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 12px 12px;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  font-family: "Outfit", sans-serif;
+}
+
+.pastes,
+.userpaste {
+  margin: 20px;
+}
+.pastes-details h4 {
+  margin: 10px 0 10px 0;
+}
+.pastes-details p {
+  margin: 0;
+}
+
+.mypaste {
+  margin-top: 0px;
+}
+
+.paste {
+  position: relative;
+}
+
+.paste textarea {
+  background-color: #1f1b1b;
+}
+
+.icon {
+  position: absolute;
+  top: 2.9em;
+  right: 0.5em;
+}
+.icon span {
+  padding: 2px;
+  cursor: pointer;
+}
+
+span:hover {
+  color: #00f;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #00f;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+/* Signup Form */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+div.error {
+  padding: 10px;
+  background: #333;
+  border: 1px solid #e7195a;
+  color: #e7195a;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.signup input,
+.login input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+}
+
+@media only screen and (max-width: 902px) {
+  .home {
+    gap: 45px;
+  }
+  nav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .home {
+    grid-template-columns: 100%;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 482px) {
+  form.login,
+  form.signup {
+    margin: 40px 20px;
+  }
+}
