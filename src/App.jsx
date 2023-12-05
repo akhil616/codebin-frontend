@@ -10,7 +10,6 @@ import Edit from "./page/Edit";
 import NotFound from "./page/NotFound";
 
 function App() {
-  const { pastes } = usePasteContext();
   const { user } = useAuthContext();
   return (
     <>

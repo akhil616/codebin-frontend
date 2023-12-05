@@ -11,11 +11,14 @@ const UserPaste = () => {
   const { user } = useAuthContext();
   useEffect(() => {
     const fetchPaste = async () => {
-      const response = await fetch("http://localhost:5500/api/mypastes/", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BASE_URL}/api/mypastes/`,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
       if (response.ok) {
         dispatch({ type: "SET_PASTES", payload: json });

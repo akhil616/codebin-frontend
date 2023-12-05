@@ -8,7 +8,9 @@ const Sidebar = () => {
 
   useEffect(() => {
     const fetchPaste = async () => {
-      const response = await fetch("http://localhost:5500/api/pastes/");
+      const response = await fetch(
+        `${import.meta.env.VITE_BASE_URL}/api/pastes/`
+      );
       const json = await response.json();
       if (response.ok) {
         dispatch({ type: "SET_PASTES", payload: json });
